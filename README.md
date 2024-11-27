@@ -1,8 +1,6 @@
-The Inner Strength Institute 🌟
+The Inner Strength Institute 
 Welcome to the GitHub repository for The Inner Strength Institute, a platform dedicated to fostering personal growth, mental wellness, and emotional strength. This website serves as a hub for workshops, programs, and resources designed to empower individuals and help them achieve their full potential.
 
-🖥️ Live Site
-Visit the live website here: The Inner Strength Institute.
 
 📜 Table of Contents
 Overview
