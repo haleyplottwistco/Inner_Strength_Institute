@@ -85,5 +85,5 @@ body {
 html, body {
   height: 100%; /* Ensure full page coverage */
   margin: 0;
-  background: vertical-gradient(to right, #d4e9ff, #054281);
+  background: linear-gradient(to right, #d4e9ff, #054281);
 }
