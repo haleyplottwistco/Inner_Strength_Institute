@@ -82,8 +82,8 @@ body {
   margin: 20px; /* Adjusts margin around the hero text */
   padding: 10px; /* Adds space inside the container */
 }
-body {
-  background: linear-gradient(to bottom, #fff 0%, #054281 100%);
+html, body {
+  height: 100%; /* Ensure full page coverage */
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #d4e9ff, #054281);
 }
