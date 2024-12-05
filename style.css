@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Lato Light', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: #054281;
 }
 
 .hero {
@@ -32,7 +32,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #054281;
   font-weight: bold;
 }
 
