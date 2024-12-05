@@ -7,6 +7,14 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Apply gradient background to the entire page */
+    body {
+      margin: 0;
+      padding: 0;
+      background: vertical-gradient(to right, #00b4d8, #90e0ef); /* Gradient from blue to light blue */
+      font-family: 'Roboto', sans-serif;
+    }
+
     /* Hide the first Inner Strength Institute text */
     .logo {
       display: none;
@@ -22,6 +30,73 @@
     .logo-container {
       text-align: center;
       margin: 20px 0;
+    }
+
+    /* Add basic styling for the hero section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      color: #ffffff;
+    }
+
+    /* Navigation bar styling */
+    nav {
+      background-color: #333;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      padding: 0;
+    }
+
+    .nav-links li {
+      display: inline;
+      margin: 0 15px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    /* Staff profiles section */
+    .staff-profiles {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .staff-profile {
+      text-align: center;
+    }
+
+    .staff-profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%; /* Make image round */
+      border: 5px solid #fff; /* Optional white border around the image */
+    }
+
+    .staff-profile h3 {
+      margin-top: 10px;
+      font-size: 1.5em;
+    }
+
+    .staff-profile p {
+      font-size: 1em;
+      color: #333;
+    }
+
+    /* Add padding to the footer */
+    .footer {
+      padding: 40px;
+      background-color: #333;
+      color: #ffffff;
+      text-align: center;
     }
   </style>
 </head>
@@ -46,6 +121,23 @@
   <!-- Logo Section -->
   <section class="logo-container">
     <img src="TheInnerStrengthNowords.png" alt="Logo" width="600">
+  </section>
+
+  <!-- Staff Profiles Section -->
+  <section class="staff-profiles">
+    <!-- Staff Member 1 -->
+    <div class="staff-profile">
+      <img src="staff1.jpg" alt="Staff 1">
+      <h3>John Doe</h3>
+      <p>John is a licensed therapist with a passion for empowering individuals to overcome their challenges. He specializes in anxiety and stress management.</p>
+    </div>
+
+    <!-- Staff Member 2 -->
+    <div class="staff-profile">
+      <img src="staff2.jpg" alt="Staff 2">
+      <h3>Jane Smith</h3>
+      <p>Jane is a mental health coach dedicated to helping people achieve emotional balance and personal growth. She has extensive experience in coaching athletes.</p>
+    </div>
   </section>
 
   <section id="services" class="services-section">
