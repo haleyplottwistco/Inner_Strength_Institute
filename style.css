@@ -78,3 +78,7 @@ body {
 .text-uppercase {
   text-transform: uppercase;
 }
+.hero-text {
+  margin: 20px; /* Adjusts margin around the hero text */
+  padding: 10px; /* Adds space inside the container */
+}
