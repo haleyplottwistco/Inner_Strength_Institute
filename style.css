@@ -63,3 +63,15 @@ body {
   color: #fff;
   padding: 1em 0;
 }
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically if needed */
+  text-align: center;
+  margin: 20px 0; /* Optional spacing above and below the logo */
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto; /* Maintains the image's aspect ratio */
+}
