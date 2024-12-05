@@ -88,3 +88,6 @@ html, body {
   margin: 0;
   background: linear-gradient(to right, #d4e9ff, #054281);
 }
+.logo {
+  margin-top: 10px; /* reduce this value to decrease space */
+}
