@@ -59,9 +59,10 @@ body {
 }
 
 .footer {
-  background: #ffffff;
-  color: #054281;
-  padding: 1em 0;
+  padding: 40px;
+  background-color: #ffffff; /* Set background to white */
+  color: #054281; /* Set text color to the desired color */
+  text-align: center;
 }
 .logo-container {
   display: flex;
