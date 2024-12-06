@@ -2,7 +2,7 @@ body {
   margin: 0;
   font-family: 'Lato Light', sans-serif;
   line-height: 1.6;
-  color: #054281;
+  color: #054281; /* Dark blue for all body text */
 }
 
 .hero {
@@ -13,7 +13,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #054281;
+  color: #054281; /* Dark blue for hero section text */
 }
 
 .nav {
@@ -21,7 +21,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1em 2em;
-  background: #054281;
+  background: #054281; /* Dark blue background */
 }
 
 .nav-links {
@@ -32,17 +32,18 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #054281;
+  color: #054281; /* Dark blue for navigation links */
   font-weight: bold;
 }
 
 .hero-text h1 {
   font-size: 3em;
+  color: #054281; /* Dark blue for hero title */
 }
 
 .cta-button {
-  background: #054281;
-  color: #054281;
+  background: #054281; /* Dark blue button background */
+  color: #ffffff; /* White button text for contrast */
   padding: 0.5em 1em;
   text-decoration: none;
   border-radius: 5px;
@@ -52,18 +53,21 @@ body {
 .about-section, .services-section, .footer {
   padding: 2em 1em;
   text-align: center;
+  color: #054281; /* Dark blue for all sections */
 }
 
 .service {
   margin: 1em 0;
+  color: #054281; /* Dark blue for individual services */
 }
 
 .footer {
   padding: 40px;
-  background-color: #ffffff; /* Set background to white */
-  color: #054281; /* Set text color to the desired color */
+  background-color: #ffffff; /* White footer background */
+  color: #054281; /* Dark blue footer text */
   text-align: center;
 }
+
 .logo-container {
   display: flex;
   justify-content: center; /* Centers horizontally */
@@ -76,18 +80,24 @@ body {
   max-width: 100%;
   height: auto; /* Maintains the image's aspect ratio */
 }
+
 .text-uppercase {
   text-transform: uppercase;
+  color: #054281; /* Dark blue for uppercase text */
 }
+
 .hero-text {
   margin: 20px; /* Adjusts margin around the hero text */
   padding: 10px; /* Adds space inside the container */
+  color: #054281; /* Dark blue for hero text */
 }
+
 html, body {
   height: 100%; /* Ensure full page coverage */
   margin: 0;
   background: linear-gradient(to right, #d4e9ff, #054281);
 }
+
 .logo {
-  margin-top: 10px; /* reduce this value to decrease space */
+  margin-top: 10px; /* Reduce this value to decrease space */
 }
