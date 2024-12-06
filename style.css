@@ -117,3 +117,32 @@ html, body {
 .logo {
   margin-top: 10px; /* Reduce this value to decrease space */
 }
+/* Staff profiles section for larger screens */
+.staff-profiles {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* Adjust layout for screens smaller than 768px */
+@media (max-width: 768px) {
+  .staff-profiles {
+    flex-direction: column; /* Stack profiles vertically */
+    align-items: center; /* Center them horizontally */
+    gap: 20px; /* Reduce the gap between profiles */
+  }
+
+  .staff-profile img {
+    width: 200px; /* Adjust image size for smaller screens */
+    height: 200px;
+  }
+
+  .staff-profile h3 {
+    font-size: 1.2em; /* Reduce name size for smaller screens */
+  }
+
+  .staff-profile p {
+    font-size: 1em; /* Adjust description font size */
+  }
+}
