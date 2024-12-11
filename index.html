@@ -7,41 +7,32 @@
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    /* Apply gradient background to the entire page */
+    /* Base Styles */
     body {
       margin: 0;
       padding: 0;
-      background: linear-gradient(to right, #d4e9ff, #054281); /* Gradient from blue to light blue */
+      background: linear-gradient(to right, #d4e9ff, #054281);
       font-family: 'Roboto', sans-serif;
-      color: #ffffff; /* Make all text white by default */
+      color: #ffffff;
     }
 
-    /* Hide the first Inner Strength Institute text */
-    .logo {
-      display: none;
-    }
-
-    /* Make the Inner Strength Institute text large and white */
     .hero-text h1 {
       text-transform: uppercase;
-      font-size: 4em; /* Increase font size */
-      color: #ffffff; /* Ensure the text color is white */
+      font-size: 4em;
+      color: #ffffff;
     }
 
-    /* Center the logo image */
     .logo-container {
       text-align: center;
       margin: 20px 0;
     }
 
-    /* Add basic styling for the hero section */
     .hero {
       text-align: center;
-      padding: 100px 20px;
+      padding: 60px 20px;
       color: #ffffff;
     }
 
-    /* Navigation Bar */
     nav {
       margin: 20px auto;
       text-align: center;
@@ -54,10 +45,7 @@
       display: flex;
       justify-content: center;
       gap: 20px;
-    }
-
-    .nav-links li {
-      margin: 0;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -76,84 +64,129 @@
       color: #333;
     }
 
-    /* Staff profiles section */
     .staff-profiles {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 40px;
+      gap: 20px;
       margin-top: 40px;
+      padding: 0 10px;
     }
 
     .staff-profile {
       text-align: center;
+      max-width: 300px;
     }
 
     .staff-profile img {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%; /* Make image round */
-      border: 5px solid #fff; /* Optional white border around the image */
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+      border-radius: 50%;
+      border: 5px solid #fff;
     }
 
     .staff-profile h3 {
       margin-top: 10px;
-      font-size: 1.5em;
-      color: #333; /* Make staff names stand out by using a different color */
+      font-size: 1.2em;
+      color: #333;
     }
 
     .staff-profile p {
       font-size: 1em;
-      color: #ffffff; /* Ensure all other text is white */
+      color: #ffffff;
     }
 
-    /* Add padding to the footer */
     .footer {
-      padding: 40px;
-    background-color: #054281; /* Changed to dark blue */
-    color: #ffffff;
+      padding: 20px;
+      background-color: #054281;
       text-align: center;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+      .hero-text h1 {
+        font-size: 2.5em;
+      }
+
+      .hero {
+        padding: 40px 20px;
+      }
+
+      .nav-links a {
+        font-size: 0.9em;
+        padding: 8px 16px;
+      }
+
+      .staff-profiles {
+        gap: 20px;
+      }
+
+      .staff-profile h3 {
+        font-size: 1em;
+      }
+
+      .staff-profile img {
+        max-width: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-text h1 {
+        font-size: 2em;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        padding: 10px;
+        font-size: 0.8em;
+      }
+
+      .staff-profile img {
+        max-width: 150px;
+      }
+
+      .footer {
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
   <header class="hero">
-   <nav>
-  <div class="logo">Inner Strength Institute</div>
-  <ul class="nav-links">
-    <li><a href="#About Us">About Us</a></li>
-    <li><a href="FAQs.html">FAQs</a></li>
-    <li><a href="#Resources">Resources</a></li>
-    <li><a href="#Contact">Contact Us</a></li>
-  </ul>
-</nav>
+    <nav>
+      <div class="logo">Inner Strength Institute</div>
+      <ul class="nav-links">
+        <li><a href="#About Us">About Us</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li><a href="#Resources">Resources</a></li>
+        <li><a href="#Contact">Contact Us</a></li>
+      </ul>
+    </nav>
     <div class="hero-text">
       <h1>The Inner Strength Institute</h1>
-      <p>The Inner Strength Institute is an organization dedicated to supporting men, boys, and athletes, focusing on reducing barriers to mental health care and addressing stigma within these communities. They provide mental health support tailored to the unique needs and challenges faced by males and athletes.</p>
+      <p>The Inner Strength Institute is an organization dedicated to supporting men, boys, and athletes, focusing on reducing barriers to mental health care and addressing stigma within these communities.</p>
     </div>
   </header>
 
-  <!-- Logo Section -->
   <section class="logo-container">
-    <img src="TheInnerStrengthNowords.png" alt="Logo" width="600">
+    <img src="TheInnerStrengthNowords.png" alt="Logo" width="300">
   </section>
 
-  <!-- Staff Profiles Section -->
   <section class="staff-profiles">
-    <!-- Staff Member 1 -->
     <div class="staff-profile">
       <img src="Michael.jpg" alt="Staff 1">
       <h3>Michael Mendez MA, LPC</h3>
       <p>Founder & Counselor</p>
     </div>
-
-    <!-- Staff Member 2 -->
     <div class="staff-profile">
       <img src="Caitlyn (1).jpg" alt="Staff 2">
       <h3>Caitlyn Sears MA, LPCC</h3>
       <p>Counselor</p>
-    </div>
-  </section>
-
     </div>
   </section>
 
@@ -163,8 +196,6 @@
     <p>Phone: (555) 123-4567</p>
     <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
   </footer>
-
-  <script src="js/scripts.js"></script>
 </body>
 </html>
 
