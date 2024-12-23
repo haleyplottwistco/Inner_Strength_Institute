@@ -69,6 +69,13 @@
     color: #ffffff;
   }
 
+  @media (max-width: 768px) {
+  .logo {
+    display: block; /* Ensure the logo is treated as a block-level element */
+    margin: 0 auto; /* Center the logo horizontally */
+    text-align: center; /* Center-align content inside its container */
+  }
+
 @media (max-width: 768px) {
   nav ul.nav-links {
     display: flex;
