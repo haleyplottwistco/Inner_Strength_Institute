@@ -75,6 +75,10 @@
     margin: 0 auto; /* Center the logo horizontally */
     text-align: center; /* Center-align content inside its container */
   }
+    header {
+    text-align: center; /* Ensure the header container aligns its content centrally */
+  }
+}
 
 @media (max-width: 768px) {
   nav ul.nav-links {
