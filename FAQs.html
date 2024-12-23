@@ -93,6 +93,30 @@
       font-size: 1em;
       color: #ffffff;
     }
+          @media (max-width: 768px) {
+      nav ul.nav-links {
+      display: flex;
+      flex-direction: column; /* Stack the buttons vertically */
+      gap: 15px; /* Add spacing between buttons */
+    }
+
+      nav ul.nav-links li {
+      margin: 5px 0; /* Optional: additional margin around each button */
+    }
+
+      nav ul.nav-links a {
+      padding: 10px 15px; /* Adjust padding for larger clickable areas */
+    }
+    }
+
+      .staff-profile img {
+        max-width: 150px;
+      }
+
+      .footer {
+        font-size: 0.9em;
+      }
+      
 
     /* Footer */
     .footer {
