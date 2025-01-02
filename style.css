@@ -145,15 +145,13 @@ form button:hover {
     background-color: #3a9e40;
 }
 <style>
-    /* Contact Form Styles */
     .contact-form-section {
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh; /* Full viewport height */
         padding: 40px;
         background-color: #f4f4f4;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .form-container {
