@@ -1,136 +1,127 @@
-<style>
-  /* Apply gradient background to the entire page */
-  body {
+/* General Styles */
+body {
     margin: 0;
-    padding: 0;
-    background: linear-gradient(to right, #6ba6e3, #054281); /* Gradient from blue to light blue */
-    font-family: 'Roboto', sans-serif;
-    color: #ffffff; /* Make all text white by default */
-  }
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
 
-  /* Hide the first Inner Strength Institute text */
-  .logo {
-    display: none;
-  }
-
-  /* Make the Inner Strength Institute text large and white */
-  .hero-text h1 {
-    text-transform: uppercase;
-    font-size: 4em; /* Increase font size */
-    color: #ffffff; /* Ensure the text color is white */
-  }
-
-  /* Center the logo image */
-  .logo-container {
+/* Header */
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    color: #fff;
     text-align: center;
-    margin: 60px 0;
-  }
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-  /* Add basic styling for the hero section */
-  .hero {
-    text-align: center;
-    padding: 100px 20px;
-    margin: 40px 50px; /* 40px for top and bottom, 50px for left and right */
-    color: #ffffff;
-  }
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
 
-  /* Navigation Bar */
-  nav {
-    margin: 20px auto;
-    text-align: center;
-  }
+/* Navigation */
+nav {
+    margin-top: 10px;
+}
 
-  .nav-links {
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 20px;
-  }
-
-  .nav-links li {
-    margin: 0;
-  }
-
-  .nav-links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    background-color: #054281;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  .nav-links a:hover {
-    background-color: #ffffff;
-    color: #ffffff;
-  }
-
-  @media (max-width: 768px) {
-  .logo {
-    display: block; /* Ensure the logo is treated as a block-level element */
-    margin: 0 auto; /* Center the logo horizontally */
-    text-align: center; /* Center-align content inside its container */
-  }
-    header {
-    text-align: center; /* Ensure the header container aligns its content centrally */
-  }
+    flex-wrap: wrap;
 }
 
-@media (max-width: 768px) {
-  nav ul.nav-links {
-    display: flex;
-    flex-direction: column; /* Stack the buttons vertically */
-    gap: 15px; /* Add spacing between buttons */
-  }
+nav ul li {
+    margin: 0 10px;
+}
 
-  nav ul.nav-links li {
-    margin: 5px 0; /* Optional: additional margin around each button */
-  }
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
 
-  nav ul.nav-links a {
-    padding: 10px 15px; /* Adjust padding for larger clickable areas */
-  }
+nav ul li a:hover {
+    background-color: #3a9e40;
+}
 
-  /* Staff profiles section */
-  .staff-profiles {
+/* Hero Section */
+.hero {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
-  }
-
-  .staff-profile {
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: #fff;
     text-align: center;
-  }
+}
 
-  .staff-profile img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%; /* Make image round */
-    border: 2px solid #fff; /* Optional white border around the image */
-  }
+.hero h2 {
+    font-size: 36px;
+    margin: 0;
+}
 
-  .staff-profile h3 {
-    margin-top: 10px;
-    font-size: 1.5em;
-    color: #333; /* Make staff names stand out by using a different color */
-  }
+.hero p {
+    font-size: 18px;
+    margin: 10px 0 0;
+}
 
-  .staff-profile p {
-    font-size: 1em;
-    color: #ffffff; /* Ensure all other text is white */
-  }
+/* Content Section */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
 
-  /* Add padding to the footer */
-  .footer {
-    padding: 40px;
-    background-color: #054281; /* Changed to dark blue */
-    color: #ffffff;
+section h2 {
+    font-size: 28px;
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+section p {
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-  }
-</style>
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 40vh;
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    section {
+        padding: 15px;
+    }
+}
+
 
