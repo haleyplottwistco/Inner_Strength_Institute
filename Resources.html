@@ -1,211 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Resources - The Inner Strength Institute</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #d4e9ff, #054281);
-      font-family: 'Roboto', sans-serif;
-      color: #ffffff;
-      line-height: 1.6;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .navbar h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg')
+            color: white;
+        }
+
+        .hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            padding: 10px 20px;
+            background-color: white;
+            color: #3498db;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        
+
+        /* Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-card h3 {
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .content-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 40px;
+            margin-top: 40px;
+        }
+
+        .footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+        }
+
+        .footer ul li a {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+
+        .footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }<style>
+<style>
+    .contact-form-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        padding: 40px;
+        background-color: #f4f4f4;
     }
 
-    h1, h2 {
-      text-align: center;
-      text-transform: uppercase;
-      margin: 20px 0;
+    .form-container {
+        width: 100%;
+        max-width: 600px;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
-      font-size: 3em;
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
     }
 
-    h2 {
-      font-size: 2em;
+    .contact-form label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
     }
 
-    p {
-      margin: 15px 0;
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
     }
 
-    /* Navigation Bar */
-    nav {
-      margin: 20px auto;
-      text-align: center;
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
     }
 
-    .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+    .contact-form textarea {
+        resize: none;
+        height: 120px;
     }
 
-    .nav-links li {
-      margin: 0;
+    .btn {
+        background-color: #3498db;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
     }
 
-    .nav-links a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: 1px solid #ffffff;
-      border-radius: 20px;
-      background-color: #054281;
-      transition: background-color 0.3s, color 0.3s;
+    .btn:hover {
+        background-color: #2980b9;
     }
 
-    .nav-links a:hover {
-      background-color: #ffffff;
-      color: #333;
-    }
+    @media (max-width: 768px) {
+        .form-container {
+            padding: 20px;
+        }
 
-    /* FAQ Section */
-    .faq-section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-    }
+        .contact-form label {
+            font-size: 0.9rem;
+        }
 
-    .faq-item {
-      margin-bottom: 20px;
+        .btn {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
     }
+</style>
 
-    .faq-item h3 {
-      font-size: 1.5em;
-    }
-
-    .faq-item p {
-      font-size: 1em;
-    }
-          @media (max-width: 768px) {
-      nav ul.nav-links {
-      display: flex;
-      flex-direction: column; /* Stack the buttons vertically */
-      gap: 15px; /* Add spacing between buttons */
-    }
-
-      nav ul.nav-links li {
-      margin: 5px 0; /* Optional: additional margin around each button */
-    }
-
-      nav ul.nav-links a {
-      padding: 10px 15px; /* Adjust padding for larger clickable areas */
-    }
-    }
-
-      .staff-profile img {
-        max-width: 150px;
-      }
-
-      .footer {
-        font-size: 0.9em;
-      }
-      
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      background-color: #054281;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    .footer a {
-      color: #d4e9ff;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Resources</h1>
-  </header>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Providers</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Resources.html">Providers</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+        </ul>
+    </nav>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="AboutUs.html">About Us</a></li>
-      <li><a href="FAQs.html">FAQs</a></li>
-      <li><a href="contactus.html">Contact Us</a></li>
-    </ul>
-  </nav>
+    <!-- Hero Section -->
+    <section class="content">
+        <div class="content-card">
+            <h3>Providers</h3>
+            <p>The Inner Strength Institute is an organization dedicated to supporting men, boys, and athletes, focusing on reducing barriers to mental health care and addressing stigma within these communities. They provide mental health support tailored to the unique needs and challenges faced by males and athletes.</p>
+            <p> </p>
+         <main class="main-content">
+        </form>
+      </div>
+    </section>
+    </main>
+    </section>
 
-  <section class="faq-section">
-    <div class="faq-item">
-      <h3></h3>
-      <p>This list includes the National Suicide and Crisis hotline as well as services in Colorado Springs, Colorado for those in mental health crisis. Please note: this is a running list and may not include the most up-to-date information-nor can we guarantee availability. If you are in immediate crisis, please dial 911.</p>
-    </div>
-    <!-- Repeat FAQ items as needed -->
-    <div class="faq-item">
-      <h3>988 SUICIDE AND CRISIS HOTLINE</h3>
-      <p>988 (Text or Call), National Network Line
-      <p>The 988 Suicide and Crisis Lifeline is a United States-based suicide prevention network of over 200+ crisis centers that provides 24/7 service via a toll-free hotline with the number 9-8-8. It is available to anyone in suicidal crisis or emotional distress. </p>
-    </div>
-      <h3>CEDAR SPRINGS HOSPITAL CRISIS CENTER</h3>
-      <p>(719) 633-4114, 2135 Southgate Rd. Colorado Springs, CO 80906​
-      <p>Offers 24/7 crisis stabilization, evaluation, and referral services for individuals experiencing a mental health emergency.</p>
-    </div>      
-      <h3>DIVERSUS HEALTH LIGHTHOUSE WALK-IN CRISIS CENTER</h3>
-      <p>(719) 572-6100 (Office), 844-572-6086 (Crisis Hotline)
-      <p>115 S.Parkside Dr. Colorado Springs​, Offers 24/7 crisis services, counseling, and psychiatric therapy, as well as round-the-clock acute care for mental wellbeing.</p>
-    </div>      
-      <h3>PEAK VIEW BEHAVIORAL HEALTH</h3>
-      <p>(719) 444-8484, 7353 Sisters Grove, Colorado Springs, CO 80923
-      <p>Offers inpatient and outpatient mental health services, including crisis stabilization, assessment, and treatment.</p>
-    </div>      
-      <h3>FRONT RANGE CLINIC</h3>
-      <p>(719) 522-1100, 2312 E Bijou St, Colorado Springs, CO 80909
-      <p>Provides medication-assisted treatment for individuals struggling with addiction and co-occurring mental health disorders.</p>
-    </div>      
-      <h3>COLORADO CRISIS SERVICES</h3>
-      <p>(844) 493-8255
-      <p>Offers free and confidential crisis support services 24/7, including phone support, text support, and in-person support at various locations throughout the state.</p>
-    </div>      
-      <h3>EL PASO COUNTY PUBLIC HEALTH CRISIS RESPONSE</h3>
-      <p>(719) 578-3167, 1675 W Garden of the Gods Rd, Colorado Springs, CO 80907
-      <p>Provides crisis response services, including emergency mental health evaluations and referrals to community resources.</p>
-    </div>      
-      <h3>INSIGHT SERVICES</h3>
-      <p>(719) 447-0370, 2120 Academy Cir #101, Colorado Springs, CO 80909
-      <p>Provides a range of mental health services, including counseling, therapy, and medication management.</p>
-    </div>      
-      <h3>PEAK WELLNESS CENTER</h3>
-      <p>(719) 633-4114, 2135 Southgate Rd, Colorado Springs, CO 80906
-      <p>Offers intensive outpatient treatment for individuals struggling with mental health or substance use disorders.</p>
-    </div>      
-      <h3>CEDAR SPRINGS PARTIAL HOSPITALIZATION PROGRAM</h3>
-      <p>(719) 572-6100, 1920 Valley View Dr, Colorado Springs, CO 80918
-      <p>Provides a range of mental health services, including crisis intervention, assessment, and counseling.</p>
-    </div>      
-      <h3>PIKES PEAK SUICIDE PREVENTION</h3>
-      <p>(719) 573-7447, 704 N Tejon St, Colorado Springs, CO 80903
-      <p>Offers crisis intervention and prevention services, including suicide prevention education, support groups, and counseling.</p>
-
-    </div>
-  </section>
-
- <footer class="footer">
-    <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
-    <p>Email: <a href="mailto:support@theinnerstrengthinstitute.com">support@theinnerstrengthinstitute.com</a></p>
-    <p>Phone: 833-756-8894</p>
-    <p><a href="https://www.instagram.com/innerstrength_institute/" target="_blank">
-        <img src="Untitled design (5).png" alt="Instagram" style="width: 60px; height: 60px;">
-  </footer>
-</body>
-</html>
+    <!-- Footer -->
+    <footer class="footer">
+        <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <p>&copy; 2024 Inner Strength Institute. All Rights Reserved.</p>
+    </footer>
