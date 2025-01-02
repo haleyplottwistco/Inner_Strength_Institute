@@ -3,223 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQs - The Inner Strength Institute</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    /* General Styles */
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(to right, #6ba6e3, #054281);
-      font-family: 'Roboto', sans-serif;
-      color: #ffffff;
-      line-height: 1.6;
-    }
-
-    h1, h2 {
-      text-align: center;
-      text-transform: uppercase;
-      margin: 20px 0;
-    }
-
-    h1 {
-      font-size: 3em;
-      color: #ffffff;
-    }
-
-    h2 {
-      font-size: 2em;
-      color: #ffffff;
-    }
-
-    p {
-      margin: 15px 0;
-    }
-
-    /* Navigation Bar */
-    nav {
-      margin: 20px auto;
-      text-align: center;
-    }
-
-    .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    .nav-links li {
-      margin: 0;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #ffffff;
-      font-weight: bold;
-      padding: 10px 20px;
-      border: 1px solid #ffffff;
-      border-radius: 20px;
-      background-color: #054281;
-      transition: background-color 0.3s, color 0.3s;
-    }
-
-    .nav-links a:hover {
-      background-color: #ffffff;
-      color: #333;
-    }
-
-    /* FAQ Section */
-    .faq-section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-    }
-
-    .faq-item {
-      margin-bottom: 20px;
-    }
-
-    .faq-item h3 {
-      font-size: 1.5em;
-      color: #ffffff;
-    }
-
-    .faq-item p {
-      font-size: 1em;
-      color: #ffffff;
-    }
-          @media (max-width: 768px) {
-      nav ul.nav-links {
-      display: flex;
-      flex-direction: column; /* Stack the buttons vertically */
-      gap: 15px; /* Add spacing between buttons */
-    }
-
-      nav ul.nav-links li {
-      margin: 5px 0; /* Optional: additional margin around each button */
-    }
-
-      nav ul.nav-links a {
-      padding: 10px 15px; /* Adjust padding for larger clickable areas */
-    }
-    }
-
-      .staff-profile img {
-        max-width: 150px;
-      }
-
-      .footer {
-        font-size: 0.9em;
-      }
-      
-
-    /* Footer */
-    .footer {
-      text-align: center;
-      background-color: #054281;
-      padding: 20px;
-      color: #ffffff;
-      margin-top: 40px;
-    }
-
-    .footer a {
-      color: #d4e9ff;
-      text-decoration: none;
-    }
-
-    .footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <title>FAQs - Inner Strength Institute</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Frequently Asked Questions</h1>
+  <header class="header">
+    <div class="logo">
+      <img src="images/logo.png" alt="Inner Strength Institute Logo">
+    </div>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+        <li><a href="FAQs.html" class="active">FAQs</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <nav>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="AboutUs.html">About Us</a></li>
-      <li><a href="Resources.html">Resources</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-    </ul>
-  </nav>
+  <main class="main-content">
+    <section class="faq-hero">
+      <h1>Frequently Asked Questions</h1>
+      <p>Find answers to common questions about the Inner Strength Institute.</p>
+    </section>
 
-  <section class="faq-section">
-    <div class="faq-item">
-      <h3>1. What is the Inner Strength Institute?</h3>
-      <p>The Inner Strength Institute is an organization dedicated to reducing barriers to mental health care and combating stigma among men and boys.</p>
-    </div>
-    <div class="faq-item">
-      <h3>2. Who can benefit from your services?</h3>
-      <p>Our services are designed for men and boys of all ages who may be struggling with mental health challenges, such as stress, anxiety, or trauma.</p>
-    </div>
-    <div class="faq-item">
-      <h3>3. Why is there a focus on men and boys?</h3>
-      <p>Men often face unique challenges, including societal stigma around expressing emotions or seeking help. We aim to create a safe and supportive environment for them.</p>
-    </div>
-    <div class="faq-item">
-      <h3>4. What types of services do you offer?</h3>
-      <p>Our services include individual therapy, offering personalized one-on-one sessions designed to address your unique needs. Group therapy provides the opportunity to connect with a supportive community of peers navigating similar challenges. Through workshops and seminars, you can develop valuable skills such as emotional regulation, stress management, and effective communication. We also offer youth programs, providing specialized mentorship and skill-building support for boys. Additionally, our corporate wellness programs deliver focused workshops tailored for male-dominated work environments.</p>
-    </div>
-    <div class="faq-item">
-      <h3>5. How do I know if therapy is right for me?</h3>
-      <p>Therapy can benefit anyone facing challenges they want to understand or overcome. If you’re feeling stuck, overwhelmed, or looking for ways to improve your mental well-being, therapy can provide tools and strategies to help.</p>
-    </div>
-    <div class="faq-item">
-      <h3>6. How do I schedule an appointment?</h3>
-      <p>To schedule an appointment, you can call us at 833-756-8894, complete our online form, or email us at support@theinnerstrengthinstitute.com. We’ll walk you through the process and connect you with a therapist who best meets your needs.</p>
-    </div>
-    <div class="faq-item">
-      <h3>7. What can I expect during my first session?</h3>
-      <p>Your first session will be an opportunity to discuss your concerns and goals with your therapist. They’ll ask questions to better understand your needs and work with you to develop a plan tailored to your situation.</p>
-    </div>
-    <div class="faq-item">
-      <h3>8. Do you offer virtual therapy sessions?</h3>
-      <p>Yes! We provide telehealth options for those who prefer or need to meet online. Virtual sessions are confidential and conducted via a secure platform.</p>
-    </div>
-    <div class="faq-item">
-      <h3>9. How much do services cost?</h3>
-      <p>Costs vary depending on the type of service. We strive to keep our services affordable and may offer sliding-scale fees based on financial need. Contact us for specific pricing or to discuss payment options.</p>
-    </div>
-    <div class="faq-item">
-      <h3>10. Do you accept insurance?</h3>
-      <p>Yes, we accept many insurance plans. Please contact us to verify coverage or learn more about out-of-pocket costs. If you don’t have insurance, we’ll work with you to explore alternative payment options.</p>
-    </div>
-    <div class="faq-item">
-      <h3>11. How do you maintain confidentiality?</h3>
-      <p>Confidentiality is a cornerstone of our practice. All information shared during therapy is protected by strict privacy laws. The only exceptions are situations involving immediate danger to yourself or others, or if required by law.</p>
-    </div>
-    <div class="faq-item">
-      <h3>12. Can I refer someone to the Inner Strength Institute?</h3>
-      <p>Absolutely! If you know someone who could benefit from our services, please encourage them to reach out. You can also contact us directly for guidance on how to make a referral.</p>
-    </div>
-    <div class="faq-item">
-      <h3>13. Do you offer resources for families or loved ones?</h3>
-      <p>Yes, we provide educational materials and support resources to help families better understand and support the mental health journey of their loved ones.</p>
-    </div>
-    <div class="faq-item">
-      <h3>14. What if I’m in crisis or need immediate help?</h3>
-      <p>If you are experiencing a mental health crisis, please call 911 or reach out to a crisis hotline immediately. The National Suicide Prevention Lifeline is available at 988, and you can access the Crisis Text Line by texting HOME to 741741.</p>
-    </div>
-    <div class="faq-item">
-      <h3>15. How can I support your mission?</h3>
-      <p>You can support the Inner Strength Institute by spreading Awareness and sharing our mission with your network.</p>
-    </div>
-  </section>
+    <section class="faq-section">
+      <div class="faq-container">
+        <div class="faq">
+          <h2>What is the Inner Strength Institute?</h2>
+          <p>The Inner Strength Institute is an organization dedicated to reducing barriers to mental health care and combating stigma among men and boys.</p>
+        </div>
+        <div class="faq">
+          <h2>Who can benefit from your services?</h2>
+          <p>Our services are designed for men and boys of all ages who may be struggling with mental health challenges, such as stress, anxiety, or trauma.</p>
+        </div>
+        <div class="faq">
+          <h2>Why is there a focus on men and boys?</h2>
+          <p>Men often face unique challenges, including societal stigma around expressing emotions or seeking help. We aim to create a safe and supportive environment for them.</p>
+        </div>
+        <div class="faq">
+          <h2>What types of services do you offer?</h2>
+          <p>Our services include individual therapy, offering personalized one-on-one sessions designed to address your unique needs. Group therapy provides the opportunity to connect with a supportive community of peers navigating similar challenges. Through workshops and seminars, you can develop valuable skills such as emotional regulation, stress management, and effective communication. We also offer youth programs, providing specialized mentorship and skill-building support for boys. Additionally, our corporate wellness programs deliver focused workshops tailored for male-dominated work environments.</p>
+        </div> 
+        <div class="faq">
+          <h2>How do I know if therapy is right for me?</h2>
+          <p>Therapy can benefit anyone facing challenges they want to understand or overcome. If you’re feeling stuck, overwhelmed, or looking for ways to improve your mental well-being, therapy can provide tools and strategies to help.</p>
+        </div>
+        <div class="faq">
+          <h2>How do I schedule an appointment?</h2>
+          <p>To schedule an appointment, you can call us at 833-756-8894, complete our online form, or email us at support@theinnerstrengthinstitute.com. We’ll walk you through the process and connect you with a therapist who best meets your needs.</p>
+        </div>
+        <div class="faq">
+          <h2>What can I expect during my first session?</h2>
+          <p>Your first session will be an opportunity to discuss your concerns and goals with your therapist. They’ll ask questions to better understand your needs and work with you to develop a plan tailored to your situation.</p>
+        </div>    
+        <div class="faq">
+          <h2>Do you offer virtual therapy sessions?</h2>
+          <p>Yes! We provide telehealth options for those who prefer or need to meet online. Virtual sessions are confidential and conducted via a secure platform.</p>
+        </div> 
+        <div class="faq">
+          <h2>How much do services cost?</h2>
+          <p>Costs vary depending on the type of service. We strive to keep our services affordable and may offer sliding-scale fees based on financial need. Contact us for specific pricing or to discuss payment options.</p>
+        </div>
+        <div class="faq">
+          <h2>Do you accept insurance?</h2>
+          <p>Yes, we accept many insurance plans. Please contact us to verify coverage or learn more about out-of-pocket costs. If you don’t have insurance, we’ll work with you to explore alternative payment options.</p>
+        </div>
+        <div class="faq">
+          <h2>Can I refer someone to the Inner Strength Institute?</h2>
+          <p>Absolutely! If you know someone who could benefit from our services, please encourage them to reach out. You can also contact us directly for guidance on how to make a referral.</p>
+        </div>
+        <div class="faq">
+          <h2>What if I’m in crisis or need immediate help?</h2>
+          <p>If you are experiencing a mental health crisis, please call 911 or reach out to a crisis hotline immediately. The National Suicide Prevention Lifeline is available at 988, and you can access the Crisis Text Line by texting HOME to 741741.</p>
+        </div>
+        
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
-    <p>Email: <a href="mailto:support@theinnerstrengthinstitute.com">support@theinnerstrengthinstitute.com</a></p>
-    <p>Phone: 833-756-8894</p>
-    <p><a href="https://www.instagram.com/innerstrength_institute/" target="_blank">
-        <img src="Untitled design (5).png" alt="Instagram" style="width: 60px; height: 60px;">
   </footer>
 </body>
 </html>
