@@ -7,26 +7,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
+  <header class="hero-section">
+    <div class="hero-content">
+      <img src="images/logo.png" alt="Inner Strength Institute Logo" class="logo">
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you! Feel free to reach out with any questions, feedback, or inquiries.</p>
     </div>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contactus.html" class="active">Contact Us</a></li>
-      </ul>
-    </nav>
   </header>
 
-  <main class="main-content">
-    <section class="contact-hero">
-      <h1>Contact Us</h1>
-      <p>We'd love to hear from you! Reach out with any questions or feedback.</p>
-    </section>
+  <nav class="navbar">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contactus.html" class="active">Contact Us</a></li>
+    </ul>
+  </nav>
 
+  <main class="main-content">
     <section class="contact-form-section">
       <div class="form-container">
-        <form action="" method="POST" class="contact-form">
+        <h2>Get in Touch</h2>
+        <form action="submit_form.php" method="POST" class="contact-form">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" placeholder="Your Name" required>
           
@@ -36,15 +37,14 @@
           <label for="message">Message</label>
           <textarea id="message" name="message" placeholder="Your Message" required></textarea>
           
-          <button type="submit" class="submit-btn">Send Message</button>
+          <button type="submit" class="btn">Submit</button>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
+    <p>&copy; 2024 Inner Strength Institute. All Rights Reserved.</p>
   </footer>
 </body>
 </html>
-
