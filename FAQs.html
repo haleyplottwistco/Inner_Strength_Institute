@@ -1,25 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQs - Inner Strength Institute</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        .navbar h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar ul li a {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+        /* Hero Section */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg')
+            color: white;
+        }
+
+        .hero h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .hero a {
+            padding: 10px 20px;
+            background-color: white;
+            color: #3498db;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .hero a:hover {
+            background-color: #2980b9;
+            color: white;
+        }
+        
+
+        /* Content Section */
+        .content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content-card h3 {
+            margin-bottom: 15px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .content-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 40px;
+            margin-top: 40px;
+        }
+
+        .footer ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 10px 0;
+        }
+
+        .footer ul li a {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+        }
+
+        .footer ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }<style>
+<style>
+    .contact-form-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Full viewport height */
+        padding: 40px;
+        background-color: #f4f4f4;
+    }
+
+    .form-container {
+        width: 100%;
+        max-width: 600px;
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-form label {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
+    }
+
+    .contact-form textarea {
+        resize: none;
+        height: 120px;
+    }
+
+    .btn {
+        background-color: #3498db;
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #2980b9;
+    }
+
+    @media (max-width: 768px) {
+        .form-container {
+            padding: 20px;
+        }
+
+        .contact-form label {
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            font-size: 0.9rem;
+            padding: 8px;
+        }
+    }
+</style>
+
 </head>
 <body>
-  <header class="header">
-    <div class="logo">
-      <img src="images/logo.png" alt="Inner Strength Institute Logo">
-    </div>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contactus.html">Contact Us</a></li>
-        <li><a href="FAQs.html" class="active">FAQs</a></li>
-      </ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Providers</h1>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Resources.html">Providers</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+        </ul>
     </nav>
-  </header>
 
   <main class="main-content">
     <section class="faq-hero">
