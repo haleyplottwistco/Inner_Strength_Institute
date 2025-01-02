@@ -80,7 +80,7 @@ nav ul li a:hover {
 }
 
 .hero::before {
-  content: "";
+  content: "TheInnerStrengthNowords.png";
   display: block;
   width: 50px; /* Adjust size as needed */
   height: 50px;
