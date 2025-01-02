@@ -73,6 +73,23 @@ nav ul li a:hover {
     font-size: 18px;
     margin: 10px 0 0;
 }
+/* Logo Styling in Hero Section */
+.hero {
+  text-align: center; /* Center-aligns everything in the hero section */
+  padding-top: 50px; /* Adds some spacing above the logo */
+}
+
+.hero::before {
+  content: "";
+  display: block;
+  width: 150px; /* Adjust size as needed */
+  height: 150px;
+  background-image: url("path-to-your-logo/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto 20px; /* Centers the logo and adds spacing below */
+}
 
 /* Content Section */
 section {
