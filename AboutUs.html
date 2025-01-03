@@ -57,6 +57,7 @@
             background-color: #34495e;
             border-radius: 5px;
         }
+
         /* Hero Section */
         .hero {
             display: flex;
@@ -65,7 +66,7 @@
             align-items: center;
             text-align: center;
             padding: 100px 20px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg')
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') center center / cover no-repeat;
             color: white;
         }
 
@@ -93,9 +94,8 @@
             background-color: #2980b9;
             color: white;
         }
-        
 
-        /* Content Section */
+        /* About Us Section */
         .content {
             max-width: 1200px;
             margin: 50px auto;
@@ -158,95 +158,25 @@
                 flex-direction: column;
                 gap: 10px;
             }
-        body {
-              background: linear-gradient(to right, #3498db, #8e44ad); /* Replace with your actual gradient */
-              color: white; /* Ensure text is readable */
-        }<style>
-<style>
-    .contact-form-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full viewport height */
-        padding: 40px;
-        background-color: #f4f4f4;
-    }
 
-    .form-container {
-        width: 100%;
-        max-width: 600px;
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
+            .hero {
+                padding: 60px 20px;
+            }
 
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
+            .hero h2 {
+                font-size: 2rem;
+            }
 
-    .contact-form label {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #333;
-    }
+            .content {
+                padding: 10px;
+                grid-template-columns: 1fr;
+            }
 
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-        outline: none;
-        border-color: #3498db;
-        box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
-    }
-
-    .contact-form textarea {
-        resize: none;
-        height: 120px;
-    }
-
-    .btn {
-        background-color: #3498db;
-        color: white;
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-        background-color: #2980b9;
-    }
-
-    @media (max-width: 768px) {
-        .form-container {
-            padding: 20px;
+            .footer {
+                padding: 10px;
+            }
         }
-
-        .contact-form label {
-            font-size: 0.9rem;
-        }
-
-        .btn {
-            font-size: 0.9rem;
-            padding: 8px;
-        }
-    }
-</style>
-
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -262,16 +192,22 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="content">
-        <div class="content-card">
-            <h3>About Us</h3>
-            <p>The Inner Strength Institute is an organization dedicated to supporting men, boys, and athletes, focusing on reducing barriers to mental health care and addressing stigma within these communities. They provide mental health support tailored to the unique needs and challenges faced by males and athletes.</p>
-            <p> </p>
-         <main class="main-content">
-        </form>
-      </div>
+    <section class="hero">
+        <h2>Welcome to the Inner Strength Institute</h2>
+        <p>We are dedicated to supporting men, boys, and athletes, focusing on mental health, and breaking down barriers in these communities.</p>
+        <a href="#content">Learn More</a>
     </section>
-    </main>
+
+    <!-- Content Section -->
+    <section class="content" id="content">
+        <div class="content-card">
+            <h3>Our Mission</h3>
+            <p>The Inner Strength Institute is an organization committed to reducing barriers to mental health care and addressing stigma. We specialize in supporting men, boys, and athletes, tailoring our services to meet their unique needs and challenges.</p>
+        </div>
+        <div class="content-card">
+            <h3>Our Approach</h3>
+            <p>We focus on providing a safe space, compassionate care, and evidence-based therapies to help individuals thrive and overcome personal obstacles. Our work is rooted in empathy, respect, and collaboration.</p>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -283,3 +219,6 @@
         </ul>
         <p>&copy; 2024 Inner Strength Institute. All Rights Reserved.</p>
     </footer>
+</body>
+</html>
+
