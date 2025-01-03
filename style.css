@@ -72,7 +72,7 @@ nav ul li a.active {
 
 .hero img {
     width: 80px; /* Adjust logo size as needed */
-    height: auto;
+    height: 100px;
     margin-bottom: 20px;
 }
 
