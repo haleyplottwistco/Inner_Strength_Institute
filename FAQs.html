@@ -57,6 +57,7 @@
             background-color: #34495e;
             border-radius: 5px;
         }
+
         /* Hero Section */
         .hero {
             display: flex;
@@ -65,7 +66,7 @@
             align-items: center;
             text-align: center;
             padding: 100px 20px;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg')
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('hero-image.jpg') center/cover no-repeat;
             color: white;
         }
 
@@ -93,34 +94,55 @@
             background-color: #2980b9;
             color: white;
         }
-        
 
         /* Content Section */
-        .content {
-            max-width: 1200px;
-            margin: 50px auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .content-card {
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px;
+        .faq-hero {
+            background-color: #3498db;
+            color: white;
+            padding: 60px 20px;
             text-align: center;
         }
 
-        .content-card h3 {
-            margin-bottom: 15px;
+        .faq-hero h1 {
             font-family: 'Poppins', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 10px;
         }
 
-        .content-card p {
+        .faq-hero p {
+            font-size: 1.2rem;
+        }
+
+        .faq-section {
+            padding: 40px 20px;
+        }
+
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .faq {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .faq h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .faq p {
             font-size: 1rem;
             line-height: 1.5;
+        }
+
+        .faq:hover {
+            background-color: #ecf0f1;
+            cursor: pointer;
         }
 
         /* Footer */
@@ -158,102 +180,25 @@
                 flex-direction: column;
                 gap: 10px;
             }
-        body {
-            background: linear-gradient(to right, #3498db, #8e44ad); /* Match your homepage gradient */
-            background-attachment: fixed; /* Optional: Makes gradient fixed on scroll */
-            background-size: cover;
-            color: white; /* Adjust text color for readability */
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif; /* Match the font with your homepage */
+
+            .faq-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .faq-hero p {
+                font-size: 1rem;
+            }
+
+            .faq h2 {
+                font-size: 1.4rem;
+            }
+
+            .faq p {
+                font-size: 0.9rem;
+            }
         }
 
-        }<style>
-<style>
-    .contact-form-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh; /* Full viewport height */
-        padding: 40px;
-        background-color: #f4f4f4;
-    }
-
-    .form-container {
-        width: 100%;
-        max-width: 600px;
-        background: white;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-form label {
-        font-size: 1rem;
-        font-weight: 600;
-        color: #333;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1rem;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-        outline: none;
-        border-color: #3498db;
-        box-shadow: 0 0 4px rgba(52, 152, 219, 0.3);
-    }
-
-    .contact-form textarea {
-        resize: none;
-        height: 120px;
-    }
-
-    .btn {
-        background-color: #3498db;
-        color: white;
-        font-size: 1rem;
-        font-weight: 600;
-        padding: 10px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-
-    .btn:hover {
-        background-color: #2980b9;
-    }
-
-    @media (max-width: 768px) {
-        .form-container {
-            padding: 20px;
-        }
-
-        .contact-form label {
-            font-size: 0.9rem;
-        }
-
-        .btn {
-            font-size: 0.9rem;
-            padding: 8px;
-        }
-    }
-</style>
-
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -268,69 +213,68 @@
         </ul>
     </nav>
 
-  <main class="main-content">
-    <section class="faq-hero">
-      <h1>Frequently Asked Questions</h1>
-      <p>Find answers to common questions about the Inner Strength Institute.</p>
-    </section>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="faq-hero">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about the Inner Strength Institute.</p>
+        </section>
 
-    <section class="faq-section">
-      <div class="faq-container">
-        <div class="faq">
-          <h2>What is the Inner Strength Institute?</h2>
-          <p>The Inner Strength Institute is an organization dedicated to reducing barriers to mental health care and combating stigma among men and boys.</p>
-        </div>
-        <div class="faq">
-          <h2>Who can benefit from your services?</h2>
-          <p>Our services are designed for men and boys of all ages who may be struggling with mental health challenges, such as stress, anxiety, or trauma.</p>
-        </div>
-        <div class="faq">
-          <h2>Why is there a focus on men and boys?</h2>
-          <p>Men often face unique challenges, including societal stigma around expressing emotions or seeking help. We aim to create a safe and supportive environment for them.</p>
-        </div>
-        <div class="faq">
-          <h2>What types of services do you offer?</h2>
-          <p>Our services include individual therapy, offering personalized one-on-one sessions designed to address your unique needs. Group therapy provides the opportunity to connect with a supportive community of peers navigating similar challenges. Through workshops and seminars, you can develop valuable skills such as emotional regulation, stress management, and effective communication. We also offer youth programs, providing specialized mentorship and skill-building support for boys. Additionally, our corporate wellness programs deliver focused workshops tailored for male-dominated work environments.</p>
-        </div> 
-        <div class="faq">
-          <h2>How do I know if therapy is right for me?</h2>
-          <p>Therapy can benefit anyone facing challenges they want to understand or overcome. If you’re feeling stuck, overwhelmed, or looking for ways to improve your mental well-being, therapy can provide tools and strategies to help.</p>
-        </div>
-        <div class="faq">
-          <h2>How do I schedule an appointment?</h2>
-          <p>To schedule an appointment, you can call us at 833-756-8894, complete our online form, or email us at support@theinnerstrengthinstitute.com. We’ll walk you through the process and connect you with a therapist who best meets your needs.</p>
-        </div>
-        <div class="faq">
-          <h2>What can I expect during my first session?</h2>
-          <p>Your first session will be an opportunity to discuss your concerns and goals with your therapist. They’ll ask questions to better understand your needs and work with you to develop a plan tailored to your situation.</p>
-        </div>    
-        <div class="faq">
-          <h2>Do you offer virtual therapy sessions?</h2>
-          <p>Yes! We provide telehealth options for those who prefer or need to meet online. Virtual sessions are confidential and conducted via a secure platform.</p>
-        </div> 
-        <div class="faq">
-          <h2>How much do services cost?</h2>
-          <p>Costs vary depending on the type of service. We strive to keep our services affordable and may offer sliding-scale fees based on financial need. Contact us for specific pricing or to discuss payment options.</p>
-        </div>
-        <div class="faq">
-          <h2>Do you accept insurance?</h2>
-          <p>Yes, we accept many insurance plans. Please contact us to verify coverage or learn more about out-of-pocket costs. If you don’t have insurance, we’ll work with you to explore alternative payment options.</p>
-        </div>
-        <div class="faq">
-          <h2>Can I refer someone to the Inner Strength Institute?</h2>
-          <p>Absolutely! If you know someone who could benefit from our services, please encourage them to reach out. You can also contact us directly for guidance on how to make a referral.</p>
-        </div>
-        <div class="faq">
-          <h2>What if I’m in crisis or need immediate help?</h2>
-          <p>If you are experiencing a mental health crisis, please call 911 or reach out to a crisis hotline immediately. The National Suicide Prevention Lifeline is available at 988, and you can access the Crisis Text Line by texting HOME to 741741.</p>
-        </div>
-        
-      </div>
-    </section>
-  </main>
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="faq-container">
+                <div class="faq">
+                    <h2>What is the Inner Strength Institute?</h2>
+                    <p>The Inner Strength Institute is an organization dedicated to reducing barriers to mental health care and combating stigma among men and boys.</p>
+                </div>
+                <div class="faq">
+                    <h2>Who can benefit from your services?</h2>
+                    <p>Our services are designed for men and boys of all ages who may be struggling with mental health challenges, such as stress, anxiety, or trauma.</p>
+                </div>
+                <div class="faq">
+                    <h2>Why is there a focus on men and boys?</h2>
+                    <p>Men often face unique challenges, including societal stigma around expressing emotions or seeking help. We aim to create a safe and supportive environment for them.</p>
+                </div>
+                <div class="faq">
+                    <h2>What types of services do you offer?</h2>
+                    <p>Our services include individual therapy, group therapy, workshops, seminars, youth programs, and corporate wellness initiatives aimed at fostering mental well-being.</p>
+                </div> 
+                <div class="faq">
+                    <h2>How do I know if therapy is right for me?</h2>
+                    <p>Therapy can benefit anyone facing challenges they want to understand or overcome. If you're feeling stuck or overwhelmed, therapy can provide helpful tools and strategies.</p>
+                </div>
+                <div class="faq">
+                    <h2>How do I schedule an appointment?</h2>
+                    <p>Call us at 833-756-8894, complete our online form, or email support@theinnerstrengthinstitute.com to schedule your appointment.</p>
+                </div>
+                <div class="faq">
+                    <h2>Do you offer virtual therapy sessions?</h2>
+                    <p>Yes, we offer secure telehealth options for virtual therapy sessions to ensure accessibility and confidentiality.</p>
+                </div>
+                <div class="faq">
+                    <h2>How much do services cost?</h2>
+                    <p>Costs vary by service. We offer affordable rates and sliding-scale fees based on financial need. Please contact us for pricing details.</p>
+                </div>
+                <div class="faq">
+                    <h2>Do you accept insurance?</h2>
+                    <p>Yes, we accept many insurance plans. Contact us for verification or to discuss alternative payment options if you're uninsured.</p>
+                </div>
+                <div class="faq">
+                    <h2>Can I refer someone to the Inner Strength Institute?</h2>
+                    <p>Absolutely! If you know someone who could benefit, please encourage them to reach out directly for guidance on making a referral.</p>
+                </div>
+                <div class="faq">
+                    <h2>What if I’m in crisis or need immediate help?</h2>
+                    <p>If you're experiencing a mental health crisis, call 911 or a crisis hotline. The National Suicide Prevention Lifeline is available at 988.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <footer class="footer">
-    <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
+    </footer>
 </body>
 </html>
