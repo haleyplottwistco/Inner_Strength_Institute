@@ -58,7 +58,7 @@
             border-radius: 5px;
         }
 
-        /* Hero Section */
+        /* FAQ Section */
         .faq-hero {
             background-color: #3498db;
             color: white;
@@ -69,25 +69,44 @@
         .faq-hero h1 {
             font-family: 'Poppins', sans-serif;
             font-size: 3rem;
-            margin-bottom: 20px; /* Adjust spacing between header and image */
+            margin-bottom: 10px;
         }
 
         .faq-hero p {
             font-size: 1.2rem;
-            margin-bottom: 30px;
         }
 
-        /* Rounded Image Styling */
-        .rounded-frame {
-            display: block;
-            margin: 20px auto;
-            width: 200px; /* Adjust the width as needed */
-            height: 200px; /* Adjust the height as needed */
-            border-radius: 50%; /* Makes the image circular */
-            border: 1px solid #fff; /* Adds a border with your desired color */
-            padding: 1px; /* Space between the image and the border */
-            background-color: #fff; /* Background color of the frame */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+        .faq-section {
+            padding: 40px 20px;
+        }
+
+        .faq-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* FAQ Card */
+        .faq-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .faq-card h2 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .faq-card p {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+
+        .faq-card:hover {
+            background-color: #ecf0f1;
+            cursor: pointer;
         }
 
         /* Footer */
@@ -123,54 +142,52 @@
         <section class="faq-hero">
             <h1>Frequently Asked Questions</h1>
             <p>Find answers to common questions about The Inner Strength Institute.</p>
-            <!-- Rounded Image -->
-            <img src="Sprinters.png" alt="Description of Image" class="rounded-frame">
         </section>
-        
+
         <!-- FAQ Section -->
         <section class="faq-section">
             <div class="faq-container">
-                <div class="faq">
+                <div class="faq-card">
                     <h2>What is the Inner Strength Institute?</h2>
                     <p>The Inner Strength Institute is an organization dedicated to reducing barriers to mental health care and combating stigma among men and boys.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>Who can benefit from your services?</h2>
                     <p>Our services are designed for men and boys of all ages who may be struggling with mental health challenges, such as stress, anxiety, or trauma.</p>
                 </div>
-                  <div class="faq">
+                <div class="faq-card">
                     <h2>Why is there a focus on men and boys?</h2>
                     <p>Men often face unique challenges, including societal stigma around expressing emotions or seeking help. We aim to create a safe and supportive environment for them.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>What types of services do you offer?</h2>
                     <p>Our services include individual therapy, group therapy, workshops, seminars, youth programs, and corporate wellness initiatives aimed at fostering mental well-being.</p>
                 </div> 
-                <div class="faq">
+                <div class="faq-card">
                     <h2>How do I know if therapy is right for me?</h2>
                     <p>Therapy can benefit anyone facing challenges they want to understand or overcome. If you're feeling stuck or overwhelmed, therapy can provide helpful tools and strategies.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>How do I schedule an appointment?</h2>
                     <p>Call us at 833-756-8894, complete our online form, or email support@theinnerstrengthinstitute.com to schedule your appointment.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>Do you offer virtual therapy sessions?</h2>
                     <p>Yes, we offer secure telehealth options for virtual therapy sessions to ensure accessibility and confidentiality.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>How much do services cost?</h2>
                     <p>Costs vary by service. We offer affordable rates and sliding-scale fees based on financial need. Please contact us for pricing details.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>Do you accept insurance?</h2>
                     <p>Yes, we accept many insurance plans. Contact us for verification or to discuss alternative payment options if you're uninsured.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>Can I refer someone to the Inner Strength Institute?</h2>
                     <p>Absolutely! If you know someone who could benefit, please encourage them to reach out directly for guidance on making a referral.</p>
                 </div>
-                <div class="faq">
+                <div class="faq-card">
                     <h2>What if I’m in crisis or need immediate help?</h2>
                     <p>If you're experiencing a mental health crisis, call 911 or a crisis hotline. The National Suicide Prevention Lifeline is available at 988.</p>
                 </div>
@@ -178,11 +195,9 @@
         </section>
     </main>
 
-
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
     </footer>
 </body>
 </html>
-
