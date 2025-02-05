@@ -227,9 +227,15 @@
         /* New Styles to Align Text and Image */
         .hero-content {
             display: flex;
-            align-items: center; /* Aligns the image and text vertically */
+            align-items: flex-start; /* Aligns the image and text vertically at the top */
             gap: 20px; /* Adds space between the text and image */
-            text-align: left; /* Optional: ensures text is aligned left */
+            text-align: left; /* Ensures text is aligned left */
+        }
+
+        .hero-text {
+            font-size: 1.2rem; /* Adjust font size as needed */
+            line-height: 1.6; /* Ensures the text has good readability */
+            max-width: 500px; /* Optional: ensures text doesn't stretch too far */
         }
 
         .hero-content img {
@@ -255,7 +261,7 @@
     <section class="hero">
         <h2>About Us</h2>
         <div class="hero-content">
-            <p>We are dedicated to supporting men, boys, and athletes, focusing on mental health, and breaking down barriers in these communities.</p>
+            <p class="hero-text">We are dedicated to supporting men, boys, and athletes, focusing on mental health, and breaking down barriers in these communities.</p>
             <!-- Rounded Image -->
             <img src="Group Counseling.png" alt="Description of Image" class="rounded-frame">
         </div>
