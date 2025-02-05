@@ -57,7 +57,8 @@
             background-color: #34495e;
             border-radius: 5px;
         }
-@media (max-width: 768px) {
+
+        @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 gap: 10px;
@@ -91,17 +92,18 @@
             .navbar ul li a:hover {
                 background-color: #2980b9;
             }
-        }.rounded-frame {
-    display: block;
-    margin: 20px auto;
-    width: 300px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
-    border-radius: 50%; /* Makes the image circular */
-    border: 1px solid #2c3e50; /* Adds a border with your desired color */
-    padding: 1px; /* Space between the image and the border */
-    background-color: #fff; /* Background color of the frame */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
-}
+        }
+
+        .rounded-frame {
+            display: block;
+            width: 300px; /* Adjust the width as needed */
+            height: 300px; /* Adjust the height as needed */
+            border-radius: 50%; /* Makes the image circular */
+            border: 1px solid #2c3e50; /* Adds a border with your desired color */
+            padding: 1px; /* Space between the image and the border */
+            background-color: #fff; /* Background color of the frame */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+        }
 
         /* Hero Section */
         .hero {
@@ -221,6 +223,19 @@
                 padding: 10px;
             }
         }
+
+        /* New Styles to Align Text and Image */
+        .hero-content {
+            display: flex;
+            align-items: center; /* Aligns the image and text vertically */
+            gap: 20px; /* Adds space between the text and image */
+            text-align: left; /* Optional: ensures text is aligned left */
+        }
+
+        .hero-content img {
+            max-width: 300px; /* Ensures the image doesn't become too large */
+            height: auto; /* Keeps the image's aspect ratio intact */
+        }
     </style>
 </head>
 <body>
@@ -239,9 +254,11 @@
     <!-- Hero Section -->
     <section class="hero">
         <h2>About Us</h2>
-        <p>We are dedicated to supporting men, boys, and athletes, focusing on mental health, and breaking down barriers in these communities.</p>
-         <!-- Rounded Image -->
-    <img src="Group Counseling.png" alt="Description of Image" class="rounded-frame">
+        <div class="hero-content">
+            <p>We are dedicated to supporting men, boys, and athletes, focusing on mental health, and breaking down barriers in these communities.</p>
+            <!-- Rounded Image -->
+            <img src="Group Counseling.png" alt="Description of Image" class="rounded-frame">
+        </div>
     </section>
 
     <!-- Content Section -->
@@ -267,4 +284,3 @@
     </footer>
 </body>
 </html>
-
