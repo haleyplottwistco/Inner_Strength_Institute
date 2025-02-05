@@ -26,7 +26,7 @@
             color: inherit;
         }
 
-        /* Navbar */
+        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -37,6 +37,7 @@
         }
 
         .navbar h1 {
+            font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
 
@@ -47,15 +48,51 @@
         }
 
         .navbar ul li a {
+            font-family: 'Roboto', sans-serif;
             color: white;
             padding: 8px 12px;
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s;
         }
 
         .navbar ul li a:hover {
             background-color: #34495e;
-            color: #ecf0f1;
             border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                display: none;
+                gap: 15px;
+            }
+
+            .navbar .hamburger {
+                display: flex;
+            }
+
+            .navbar ul.active {
+                display: block;
+                width: 100%;
+                text-align: center;
+                padding: 20px 0;
+            }
+
+            .navbar ul li a {
+                display: block;
+                padding: 12px 20px;
+                width: 100%;
+                background-color: #34495e;
+                text-align: center;
+            }
+
+            .navbar ul li a:hover {
+                background-color: #2980b9;
+            }
         }
 
         /* Profiles Section */
