@@ -25,7 +25,7 @@
             color: inherit;
         }
 
-/* Navigation */
+        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -75,6 +75,11 @@
         }
 
         @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             .menu {
                 display: none;
                 flex-direction: column;
@@ -95,7 +100,6 @@
                 display: flex;
             }
         }
-
 
         /* Contact Form Section */
         .contact-form-section {
@@ -211,11 +215,6 @@
             font-size: 0.9rem;
         }
     </style>
-<script>
-    function toggleMenu() {
-        document.querySelector(".menu").classList.toggle("active");
-    }
-</script>
 </head>
 <body>
     <!-- Navbar -->
@@ -226,7 +225,7 @@
             <div></div>
             <div></div>
         </div>
-        <ul class="menu"> <ul class="menu" id="nav-menu">
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="Resources.html">Providers</a></li>
@@ -263,5 +262,10 @@
         <p>&copy; 2024 Inner Strength Institute. All Rights Reserved.</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
