@@ -31,13 +31,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 40px;
+            padding: 15px 20px;
             background-color: #2c3e50;
             color: white;
+            position: relative;
         }
 
         .navbar h1 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 600;
         }
 
@@ -59,39 +59,38 @@
             border-radius: 5px;
         }
 
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 10px;
-            }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
 
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
             .navbar ul {
                 flex-direction: column;
                 display: none;
-                gap: 15px;
-            }
-
-            .navbar .hamburger {
-                display: flex;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background-color: #2c3e50;
+                text-align: center;
+                padding: 10px 0;
             }
 
             .navbar ul.active {
-                display: block;
-                width: 100%;
-                text-align: center;
-                padding: 20px 0;
+                display: flex;
             }
 
-            .navbar ul li a {
-                display: block;
-                padding: 12px 20px;
-                width: 100%;
-                background-color: #34495e;
-                text-align: center;
-            }
-
-            .navbar ul li a:hover {
-                background-color: #2980b9;
+            .hamburger {
+                display: flex;
             }
         }
 
@@ -127,17 +126,6 @@
             object-fit: cover;
         }
 
-        .profile-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-            color: #2c3e50;
-        }
-
-        .profile-card p {
-            font-size: 1rem;
-            color: #7f8c8d;
-        }
-
         .contact-button {
             display: inline-block;
             margin-top: 15px;
@@ -153,26 +141,6 @@
             background-color: #34495e;
         }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .navbar ul {
-                flex-direction: column;
-                display: none;
-                gap: 15px;
-            }
-
-            .navbar ul.active {
-                display: block;
-                text-align: center;
-                padding: 20px 0;
-            }
-        }
-
         /* Footer */
         .footer {
             background-color: #2c3e50;
@@ -181,35 +149,18 @@
             padding: 20px;
             margin-top: 40px;
         }
-
-        .footer ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            padding: 10px 0;
-        }
-
-        .footer ul li a {
-            color: white;
-            transition: color 0.3s;
-        }
-
-        .footer ul li a:hover {
-            text-decoration: underline;
-            color: #bdc3c7;
-        }
-
-        .footer p {
-            font-size: 0.9rem;
-        }
     </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <h1>Providers</h1>
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="Resources.html">Providers</a></li>
@@ -224,14 +175,12 @@
             <img src="Michael.jpg" alt="Michael Mendez">
             <h3>Michael Mendez MA, LPC</h3>
             <p>Owner | Founder</p>
-            <p>With seven years of experience as a collegiate coach, I bring a deep understanding of motivation, teamwork, and personal growth into my therapeutic approach. I integrate Cognitive Behavioral Therapy, Rational-Emotive Behavioral Therapy, and Synergetic Play Therapy to help you navigate life’s challenges with a personalized path that fits your unique needs.</p>
             <a href="contactus.html" class="contact-button">Contact Us</a>
         </div>
         <div class="profile-card">
             <img src="Caitlyn (1).jpg" alt="Caitlyn Sears">
             <h3>Caitlyn Sears MA, LPCC</h3>
             <p>Counselor</p>
-            <p>With a lifetime of experience in the sports world and coaching, I’ve seen the natural crossover between coaching and counseling. Many athletes struggling with performance anxiety also experience anxiety in other areas of their lives. My goal is to help them develop coping and communication skills that not only improve their performance but also enhance their overall well-being.</p>
             <a href="contactus.html" class="contact-button">Contact Us</a>
         </div>
     </section>
@@ -240,5 +189,11 @@
     <footer class="footer">
         <p>&copy; 2025 Providers. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
