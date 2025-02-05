@@ -24,6 +24,7 @@
             color: inherit;
         }
 
+        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -35,33 +36,44 @@
         }
 
         .navbar h1 {
-            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
         }
 
-        .nav-links {
+        .menu {
             list-style: none;
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
-        .nav-links li a {
+        .menu li a {
+            font-family: 'Roboto', sans-serif;
             color: white;
             padding: 8px 12px;
             transition: background-color 0.3s;
         }
 
-        .nav-links li a:hover {
+        .menu li a:hover {
             background-color: #34495e;
             border-radius: 5px;
         }
 
+        /* Hamburger Menu */
         .hamburger {
             display: none;
+            flex-direction: column;
+            gap: 5px;
             cursor: pointer;
-            font-size: 1.8rem;
         }
 
-                @media (max-width: 768px) {
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
             .menu {
                 display: none;
                 flex-direction: column;
