@@ -26,7 +26,7 @@
             color: inherit;
         }
 
-       /* Navigation */
+              /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -96,7 +96,6 @@
                 display: flex;
             }
         }
-
         /* Profiles Section */
         .profiles {
             display: flex;
@@ -153,6 +152,11 @@
             margin-top: 40px;
         }
     </style>
+        <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+        }
+    </script>
 </head>
 <body>
     <!-- Navbar -->
@@ -195,10 +199,5 @@
         <p>&copy; 2025 Providers. All rights reserved.</p>
     </footer>
 
-    <script>
-        function toggleMenu() {
-            document.getElementById("nav-menu").classList.toggle("active");
-        }
-    </script>
 </body>
 </html>
