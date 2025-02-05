@@ -17,7 +17,7 @@
             font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(to right, #e0f7fa, #b2ebf2); /* Blue gradient */
+            background: linear-gradient(to right, #e0f7fa, #b2ebf2);
             margin: 0;
         }
 
@@ -63,7 +63,6 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
             gap: 40px;
             padding: 50px 20px;
         }
@@ -75,8 +74,6 @@
             padding: 20px;
             text-align: center;
             max-width: 300px;
-            width: 100%;
-            transform: scale(1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -103,22 +100,24 @@
             font-size: 1rem;
             color: #7f8c8d;
         }
-            .contact-button {
-        display: inline-block;
-        margin-top: 15px;
-        padding: 10px 15px;
-        background-color: #2c3e50;
-        color: white;
-        font-size: 1rem;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
 
-    .contact-button:hover {
-        background-color: #34495e;
-    }
-</style>
-@media (max-width: 768px) {
+        .contact-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #2c3e50;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #34495e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
                 gap: 10px;
@@ -130,27 +129,10 @@
                 gap: 15px;
             }
 
-            .navbar .hamburger {
-                display: flex;
-            }
-
             .navbar ul.active {
                 display: block;
-                width: 100%;
                 text-align: center;
                 padding: 20px 0;
-            }
-
-            .navbar ul li a {
-                display: block;
-                padding: 12px 20px;
-                width: 100%;
-                background-color: #34495e;
-                text-align: center;
-            }
-
-            .navbar ul li a:hover {
-                background-color: #2980b9;
             }
         }
 
@@ -159,7 +141,7 @@
             background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 20px 40px;
+            padding: 20px;
             margin-top: 40px;
         }
 
@@ -184,7 +166,6 @@
         .footer p {
             font-size: 0.9rem;
         }
-        
     </style>
 </head>
 <body>
@@ -200,32 +181,27 @@
         </ul>
     </nav>
 
-<!-- Profiles Section -->
-<section class="profiles">
-    <div class="profile-card">
-        <img src="Michael.jpg" alt="Michael Mendez">
-        <h3>Michael Mendez MA, LPC</h3>
-        <p>Owner | Founder</p>
-        <p>With seven years of experience as a collegiate coach, I bring a deep understanding of motivation, teamwork, and personal growth into my therapeutic approach. I integrate Cognitive Behavioral Therapy, Rational-Emotive Behavioral Therapy, and Synergetic Play Therapy to help you navigate life’s challenges with a personalized path that fits your unique needs.</p>
-        <a href="contactus.html" class="contact-button">Contact Us</a>
-    </div>
-    <div class="profile-card">
-        <img src="Caitlyn (1).jpg" alt="Caitlyn Sears">
-        <h3>Caitlyn Sears MA, LPCC</h3>
-        <p>Counselor</p>
-        <p>With a lifetime of experience in the sports world and coaching, I’ve seen the natural crossover between coaching and counseling. Many athletes struggling with performance anxiety also experience anxiety in other areas of their lives. My goal is to help them develop coping and communication skills that not only improve their performance but also enhance their overall well-being.</p>
-        <a href="contactus.html" class="contact-button">Contact Us</a>
-    </div>
-</section>
+    <!-- Profiles Section -->
+    <section class="profiles">
+        <div class="profile-card">
+            <img src="Michael.jpg" alt="Michael Mendez">
+            <h3>Michael Mendez MA, LPC</h3>
+            <p>Owner | Founder</p>
+            <p>With seven years of experience as a collegiate coach, I bring a deep understanding of motivation, teamwork, and personal growth into my therapeutic approach. I integrate Cognitive Behavioral Therapy, Rational-Emotive Behavioral Therapy, and Synergetic Play Therapy to help you navigate life’s challenges with a personalized path that fits your unique needs.</p>
+            <a href="contactus.html" class="contact-button">Contact Us</a>
+        </div>
+        <div class="profile-card">
+            <img src="Caitlyn (1).jpg" alt="Caitlyn Sears">
+            <h3>Caitlyn Sears MA, LPCC</h3>
+            <p>Counselor</p>
+            <p>With a lifetime of experience in the sports world and coaching, I’ve seen the natural crossover between coaching and counseling. Many athletes struggling with performance anxiety also experience anxiety in other areas of their lives. My goal is to help them develop coping and communication skills that not only improve their performance but also enhance their overall well-being.</p>
+            <a href="contactus.html" class="contact-button">Contact Us</a>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">FAQ</a></li>
-        </ul>
-        <p>&copy; 2024 Inner Strength Institute. All Rights Reserved.</p>
+        <p>&copy; 2025 Providers. All rights reserved.</p>
     </footer>
 </body>
 </html>
