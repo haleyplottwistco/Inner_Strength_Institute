@@ -26,7 +26,7 @@
             color: inherit;
         }
 
-              /* Navigation */
+        /* Navigation */
         .navbar {
             display: flex;
             justify-content: space-between;
@@ -42,20 +42,24 @@
             font-weight: 600;
         }
 
-        .menu {
+        .nav-menu {
             list-style: none;
             display: flex;
             gap: 20px;
         }
 
-        .menu li a {
+        .nav-menu li {
+            list-style: none;
+        }
+
+        .nav-menu li a {
             font-family: 'Roboto', sans-serif;
             color: white;
             padding: 8px 12px;
             transition: background-color 0.3s;
         }
 
-        .menu li a:hover {
+        .nav-menu li a:hover {
             background-color: #34495e;
             border-radius: 5px;
         }
@@ -64,19 +68,21 @@
         .hamburger {
             display: none;
             flex-direction: column;
-            gap: 5px;
             cursor: pointer;
-        }
-
-        .hamburger div {
-            width: 30px;
-            height: 4px;
-            background-color: white;
-            border-radius: 5px;
+            font-size: 24px;
         }
 
         @media (max-width: 768px) {
-            .menu {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-menu {
                 display: none;
                 flex-direction: column;
                 width: 100%;
@@ -88,14 +94,26 @@
                 padding: 10px 0;
             }
 
-            .menu.active {
+            .nav-menu.active {
                 display: flex;
             }
 
-            .hamburger {
-                display: flex;
+            .nav-menu li {
+                padding: 10px 0;
+            }
+
+            .nav-menu li a {
+                display: block;
+                padding: 12px;
+                width: 100%;
+                background-color: #34495e;
+            }
+
+            .nav-menu li a:hover {
+                background-color: #2980b9;
             }
         }
+
         /* Profiles Section */
         .profiles {
             display: flex;
@@ -151,23 +169,26 @@
             padding: 20px;
             margin-top: 40px;
         }
-    </style>
-        <script>
-        function toggleMenu() {
-            document.getElementById("nav-menu").classList.toggle("active");
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .profiles {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-card {
+                max-width: 90%;
+            }
         }
-    </script>
+    </style>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <h1>Providers</h1>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <ul id="nav-menu">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <ul class="nav-menu" id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="Resources.html">Providers</a></li>
@@ -182,7 +203,7 @@
             <img src="Michael.jpg" alt="Michael Mendez">
             <h3>Michael Mendez MA, LPC</h3>
             <p>Owner | Founder</p>
-             <p>With seven years of experience as a collegiate coach, I bring a deep understanding of motivation, teamwork, and personal growth into my therapeutic approach. I integrate Cognitive Behavioral Therapy, Rational-Emotive Behavioral Therapy, and Synergetic Play Therapy to help you navigate life’s challenges with a personalized path that fits your unique needs.</p>
+            <p>With seven years of experience as a collegiate coach, I bring a deep understanding of motivation, teamwork, and personal growth into my therapeutic approach. I integrate Cognitive Behavioral Therapy, Rational-Emotive Behavioral Therapy, and Synergetic Play Therapy to help you navigate life’s challenges with a personalized path that fits your unique needs.</p>
             <a href="contactus.html" class="contact-button">Contact Us</a>
         </div>
         <div class="profile-card">
@@ -199,5 +220,10 @@
         <p>&copy; 2025 Providers. All rights reserved.</p>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-menu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
