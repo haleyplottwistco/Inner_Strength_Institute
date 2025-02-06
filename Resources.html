@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,24 +42,24 @@
             font-weight: 600;
         }
 
-        .nav-menu {
+        .menu {
             list-style: none;
             display: flex;
             gap: 20px;
         }
 
-        .nav-menu li {
+        .menu li {
             list-style: none;
         }
 
-        .nav-menu li a {
+        .menu li a {
             font-family: 'Roboto', sans-serif;
             color: white;
             padding: 8px 12px;
             transition: background-color 0.3s;
         }
 
-        .nav-menu li a:hover {
+        .menu li a:hover {
             background-color: #34495e;
             border-radius: 5px;
         }
@@ -68,21 +68,19 @@
         .hamburger {
             display: none;
             flex-direction: column;
+            gap: 5px;
             cursor: pointer;
-            font-size: 24px;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            border-radius: 5px;
         }
 
         @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .nav-menu {
+            .menu {
                 display: none;
                 flex-direction: column;
                 width: 100%;
@@ -94,23 +92,12 @@
                 padding: 10px 0;
             }
 
-            .nav-menu.active {
+            .menu.active {
                 display: flex;
             }
 
-            .nav-menu li {
-                padding: 10px 0;
-            }
-
-            .nav-menu li a {
-                display: block;
-                padding: 12px;
-                width: 100%;
-                background-color: #34495e;
-            }
-
-            .nav-menu li a:hover {
-                background-color: #2980b9;
+            .hamburger {
+                display: flex;
             }
         }
 
@@ -187,8 +174,12 @@
     <!-- Navbar -->
     <nav class="navbar">
         <h1>Providers</h1>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-        <ul class="nav-menu" id="nav-menu">
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="Resources.html">Providers</a></li>
@@ -222,7 +213,226 @@
 
     <script>
         function toggleMenu() {
-            document.getElementById("nav-menu").classList.toggle("active");
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Providers</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(to right, #e0f7fa, #b2ebf2);
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+        }
+
+        .navbar h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+        }
+
+        .menu {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu li {
+            list-style: none;
+        }
+
+        .menu li a {
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            padding: 8px 12px;
+            transition: background-color 0.3s;
+        }
+
+        .menu li a:hover {
+            background-color: #34495e;
+            border-radius: 5px;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                background: #2c3e50;
+                text-align: center;
+                padding: 10px 0;
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+
+        /* Profiles Section */
+        .profiles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            padding: 50px 20px;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 300px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        .contact-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 15px;
+            background-color: #2c3e50;
+            color: white;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background-color: #34495e;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        /* Responsive Fixes */
+        @media (max-width: 768px) {
+            .profiles {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .profile-card {
+                max-width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1>Providers</h1>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="Resources.html">Providers</a></li>
+            <li><a href="contactus.html">Contact</a></li>
+            <li><a href="FAQs.html">FAQs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Profiles Section -->
+    <section class="profiles">
+        <div class="profile-card">
+            <img src="Michael.jpg" alt="Michael Mendez">
+            <h3>Michael Mendez MA, LPC</h3>
+            <p>Owner | Founder</p>
+            <p>With seven years of experience as a collegiate coach, I bring a deep understanding of motivation, teamwork, and personal growth into my therapeutic approach. I integrate Cognitive Behavioral Therapy, Rational-Emotive Behavioral Therapy, and Synergetic Play Therapy to help you navigate life’s challenges with a personalized path that fits your unique needs.</p>
+            <a href="contactus.html" class="contact-button">Contact Us</a>
+        </div>
+        <div class="profile-card">
+            <img src="Caitlyn (1).jpg" alt="Caitlyn Sears">
+            <h3>Caitlyn Sears MA, LPCC</h3>
+            <p>Counselor</p>
+            <p>With a lifetime of experience in the sports world and coaching, I’ve seen the natural crossover between coaching and counseling. Many athletes struggling with performance anxiety also experience anxiety in other areas of their lives. My goal is to help them develop coping and communication skills that not only improve their performance but also enhance their overall well-being.</p>
+            <a href="contactus.html" class="contact-button">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Providers. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
         }
     </script>
 </body>
