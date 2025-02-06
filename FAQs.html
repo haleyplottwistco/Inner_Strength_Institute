@@ -47,6 +47,10 @@
             gap: 20px;
         }
 
+        .menu li {
+            list-style: none;
+        }
+
         .menu li a {
             font-family: 'Roboto', sans-serif;
             color: white;
@@ -106,7 +110,7 @@
 
         .faq-hero h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
 
@@ -130,6 +134,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             padding: 20px;
+            transition: background 0.3s ease;
         }
 
         .faq-card h2 {
@@ -146,17 +151,18 @@
             background-color: #ecf0f1;
             cursor: pointer;
         }
-                /* Rounded Image Styling */
+
+        /* Rounded Image Styling */
         .rounded-frame {
             display: block;
             margin: 20px auto;
-            width: 200px; /* Adjust the width as needed */
-            height: 200px; /* Adjust the height as needed */
-            border-radius: 50%; /* Makes the image circular */
-            border: 1px solid #fff; /* Adds a border with your desired color */
-            padding: 1px; /* Space between the image and the border */
-            background-color: #fff; /* Background color of the frame */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            padding: 1px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         /* Footer */
@@ -172,17 +178,17 @@
             font-size: 0.9rem;
         }
     </style>
-        <script>
-        function toggleMenu() {
-            document.querySelector('.menu').classList.toggle('active');
-        }
-    </script>
 </head>
 <body>
     <!-- Navbar -->
     <nav class="navbar">
         <h1>FAQs</h1>
-        <ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="AboutUs.html">About Us</a></li>
             <li><a href="Resources.html">Providers</a></li>
@@ -197,7 +203,6 @@
         <section class="faq-hero">
             <h1>Frequently Asked Questions</h1>
             <p>Find answers to common questions about The Inner Strength Institute.</p>
-        <!-- Rounded Image -->
             <img src="Sprinters.png" alt="Description of Image" class="rounded-frame">
         </section>
 
@@ -213,16 +218,8 @@
                     <p>Our services are designed for men and boys of all ages who may be struggling with mental health challenges, such as stress, anxiety, or trauma.</p>
                 </div>
                 <div class="faq-card">
-                    <h2>Why is there a focus on men and boys?</h2>
-                    <p>Men often face unique challenges, including societal stigma around expressing emotions or seeking help. We aim to create a safe and supportive environment for them.</p>
-                </div>
-                <div class="faq-card">
                     <h2>What types of services do you offer?</h2>
-                    <p>Our services include individual therapy, group therapy, workshops, seminars, youth programs, and corporate wellness initiatives aimed at fostering mental well-being.</p>
-                </div> 
-                <div class="faq-card">
-                    <h2>How do I know if therapy is right for me?</h2>
-                    <p>Therapy can benefit anyone facing challenges they want to understand or overcome. If you're feeling stuck or overwhelmed, therapy can provide helpful tools and strategies.</p>
+                    <p>We provide individual therapy, group therapy, workshops, seminars, youth programs, and corporate wellness initiatives to foster mental well-being.</p>
                 </div>
                 <div class="faq-card">
                     <h2>How do I schedule an appointment?</h2>
@@ -232,10 +229,9 @@
                     <h2>Do you offer virtual therapy sessions?</h2>
                     <p>Yes, we offer secure telehealth options for virtual therapy sessions to ensure accessibility and confidentiality.</p>
                 </div>
-                <div class="faq-card">
+                     <div class="faq-card">
                     <h2>How much do services cost?</h2>
                     <p>Costs vary by service. We offer affordable rates and sliding-scale fees based on financial need. Please contact us for pricing details.</p>
-                </div>
                 <div class="faq-card">
                     <h2>Do you accept insurance?</h2>
                     <p>Yes, we accept many insurance plans. Contact us for verification or to discuss alternative payment options if you're uninsured.</p>
@@ -246,9 +242,7 @@
                 </div>
                 <div class="faq-card">
                     <h2>What if I’m in crisis or need immediate help?</h2>
-                    <p>If you're experiencing a mental health crisis, call 911 or a crisis hotline. The National Suicide Prevention Lifeline is available at 988.</p>
-                </div>
-            </div>
+                    <p>If you're experiencing a mental health crisis, call 911 or a crisis hotline. The National Suicide Prevention Lifeline is available at 988.</p></div>
         </section>
     </main>
 
@@ -256,5 +250,11 @@
     <footer class="footer">
         <p>&copy; 2024 Inner Strength Institute. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".menu").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
